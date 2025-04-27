@@ -41,7 +41,7 @@ Develop a mobile-based solution to detect and classify diseases and nutritional 
 ## 5. Other Necessary Information
 
 - **Technologies Used**:
-  - Mobile App Development: Flutter / React Native
+  - Mobile App Development: React Native
   - Deep Learning Frameworks: TensorFlow, PyTorch, YOLOv5/YOLOv8
   - Model Deployment: TensorFlow Lite / ONNX
   - Dataset: Custom cinnamon plant images dataset (diseased barks, helathy barks, diseased leaves, healthy leaves, nutrient deficiency, cinnamon flowers)
