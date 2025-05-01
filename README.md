@@ -25,7 +25,6 @@ Develop a mobile-based solution to detect and classify diseases and nutritional 
 | Member 3   - IT21302008 - Senadeera N A D N | Identification of nutrition deficiencies and leaf diseases | How can we accurately detect magnesium, pottasium deficiencies and leaf diseases(leaf blight, leaf gall) in cinnamon plants based on early symptoms like leaf discoloration? |
 | Member 4  - IT21236532 - De Silva R C T  | Identification of Mature Cinnamon Trees and Quality Grades | How can machine learning predict the optimal maturity of cinnamon trees using cinnamon Bark characteristics to support non-invasive, efficient harvesting? and  the machine learning predict the cinnamon quality Grades using the cinnamon diameter size and color  |
 
----
 
 ## 4. Individual Objectives
 
@@ -56,7 +55,7 @@ Develop a mobile-based solution to detect and classify diseases and nutritional 
 - **Team Members**:
   - Devanji Bandara(Leader) – Early Detection of Bark Diseases
   - Kavishmi Fernando – Severity Prediction and Remedy Suggestions
-  - Devin Senadeera – Identification of Nutritional Deficiencies
+  - Devin Senadeera – Identification of Nutrition Deficiencies and Leaf Diseases
   - Tharusha De Silva – Identification of Mature Cinnamon Trees
 
 - **Supervisor**:
