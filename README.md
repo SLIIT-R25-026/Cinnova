@@ -30,7 +30,7 @@ Develop a mobile-based solution to detect and classify diseases and nutritional 
 
 | Member | Component | Individual Objectives |
 | :----- | :--------- | :--------------------- |
-| **Member 1 -IT21309410** | Early Detection of Cinnamon Bark Diseases | - Design and develop a mobile app for detecting RBD and SCD.<br>- Integrate a deep learning model for disease classification.<br>- Provide real-time feedback for farmers. |
+| **Member 1 -IT21309410** | Early Detection of Cinnamon Bark Diseases | - Design and develop a mobile app for detecting RBD and CD.<br>- Integrate a deep learning model for disease classification.<br>- Provide real-time feedback for farmers. |
 | Member 2 -  IT21813634 | Severity Prediction and Remedy Suggestions | - Train a YOLO model to classify severity levels of leaf diseases.<br>- Suggest remedies based on disease severity.<br>- Integrate severity and remedy system into the mobile app. |
 | Member 3 - IT21302008  | Identification of nutrition deficiencies and leaf diseases | - Develop a model to detect nutrient deficiencies and leaf diseases.<br>- Focus on identifying Magnesium, Potassium deficiencies and Leaf gall, Leaf blight diseases.<br>- Help farmers take early and after corrective actions(What are the fertilizers can use for nutrition deficiencies). |
 | Member 4 - IT21236532 | Identification of Mature Cinnamon Trees | - Create a predictive model for cinnamon tree maturity and Quality Grades.<br>- Use cinnamon Bark-based analysis for prediction, Use the diameter size and color to CinnamonQuality Grades <br>- Assist farmers in harvesting at the right time. |
