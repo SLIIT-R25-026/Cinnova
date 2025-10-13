@@ -1,0 +1,69 @@
+#########
+# API for Bark Disease Detection (Project 025-02) devanji
+
+http://127.0.0.1:5000/check_bark
+
+request
+{
+    "image_path": "E:\\MR.Mind_Projects\\RP025-02\\final_backend\\bark_data\\StripeCanker\\IMG_1555.JPG"
+}
+response
+{
+    "confidence": 0.9572219848632812,
+    "predicted_label": "StripeCanker"
+}
+
+# Possible predicted_label values: 'Healthy', 'RoughBark', 'StripeCanker'
+
+##########
+# API for Leaf Area Prediction (Project 025-01) kavishmi
+
+http://127.0.0.1:5000/predict_leaf_area
+
+request
+{
+    "image_path": "E:\\MR.Mind_Projects\\25-1\\testdata\\Leaf Gall\\b514c47a-IMG_8192.JPG",
+    "model_type": "leaf_gall_model"
+}
+
+# Possible model_type values: "leaf_gall_model", "leaf_bligh_model"
+
+response
+{
+    "affected_area_percentage": 4.5
+}
+
+##########
+# API for maturity prediction (project 025-03) tharusha
+
+http://127.0.0.1:5000/predict_maturity
+
+request
+{
+    "image_path": "E:\\MR.Mind_Projects\\25-3\\dataset\\test\\mature\\IMG_4957.JPG"
+}
+
+response
+{
+    "confidence": 0.9970331788063049,
+    "predicted_class": "mature"
+}
+#Possible predicted_class values: 'mature', 'unmatured'
+
+#########
+#API for leaf disease category (project 025-04) devin 
+
+http://127.0.0.1:5000/predict_leaf
+
+request
+{
+    "image_path": "E:\\MR.Mind_Projects\\25-4\\dataset\\valid\\LeafBlight\\IMG_0854.JPG"
+}
+
+response
+{
+    "confidence": 0.9751180410385132,
+    "predicted_class": "LeafBlight"
+}
+
+#all possible predicted_class : 'LeafBlight', 'LeafGall', 'Magnesium', 'healthy'
