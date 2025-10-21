@@ -1,0 +1,180 @@
+========================================
+   CINNOVA APP - APK BUILD INSTRUCTIONS
+========================================
+
+Follow these steps to create a new APK after making changes to your app:
+
+========================================
+PREREQUISITES
+========================================
+✅ Make sure you have your changes saved
+✅ Ensure you're in the main project directory: /Users/ravindurasanga/Desktop/RP025/MyApp
+✅ Have terminal/command line access
+
+========================================
+METHOD 1: EXPO PREBUILD + GRADLE (RECOMMENDED)
+========================================
+
+STEP 1: Navigate to Project Directory
+--------------------------------------
+cd /Users/ravindurasanga/Desktop/RP025/MyApp
+
+STEP 2: Update Version (Optional but Recommended)
+-------------------------------------------------
+Edit app.json and increment version:
+- Change "version": "1.0.0" to "1.0.1" (or next version)
+- Change "versionCode": 1 to 2 (or next number)
+
+STEP 3: Clean Previous Build
+----------------------------
+npx expo prebuild --platform android --clean
+
+STEP 4: Build New APK
+---------------------
+cd android
+./gradlew assembleRelease
+
+STEP 5: Locate Your APK
+-----------------------
+Your APK will be at:
+./app/build/outputs/apk/release/app-release.apk
+
+STEP 6: Copy APK to Desktop (Optional)
+--------------------------------------
+cp ./app/build/outputs/apk/release/app-release.apk ~/Desktop/Cinnova-v1.0.1.apk
+
+========================================
+METHOD 2: EAS BUILD (CLOUD BUILD)
+========================================
+
+STEP 1: Navigate to Project Directory
+--------------------------------------
+cd /Users/ravindurasanga/Desktop/RP025/MyApp
+
+STEP 2: Login to EAS (if not already logged in)
+-----------------------------------------------
+npx eas login
+
+STEP 3: Build APK via EAS
+-------------------------
+npx eas build --platform android --profile apk
+
+STEP 4: Download APK
+--------------------
+Once build completes, run:
+npx eas build:download --platform android --latest
+
+Or visit: https://expo.dev/accounts/mr.mind/projects/cinnova/builds
+
+========================================
+TROUBLESHOOTING COMMON ISSUES
+========================================
+
+Issue: "Duplicate AppTheme" Error
+---------------------------------
+Solution: Check and fix styles.xml:
+nano /Users/ravindurasanga/Desktop/RP025/MyApp/android/app/src/main/res/values/styles.xml
+Make sure there's only ONE AppTheme definition.
+
+Issue: Build Cache Problems
+----------------------------
+Solution: Clean everything:
+cd android
+./gradlew clean
+cd ..
+npx expo prebuild --platform android --clean
+
+Issue: Metro Bundler Cache
+--------------------------
+Solution: Reset Metro cache:
+npx react-native start --reset-cache
+Or:
+npm start -- --reset-cache
+
+Issue: Node Modules Problems
+----------------------------
+Solution: Reinstall dependencies:
+rm -rf node_modules
+npm install
+
+========================================
+VERSION MANAGEMENT
+========================================
+
+Before Each New Build:
+----------------------
+1. Update app.json:
+   - Increment "version": "1.0.X"
+   - Increment "versionCode": X
+
+2. Name your APK with version:
+   cp app-release.apk ~/Desktop/Cinnova-v1.0.X.apk
+
+========================================
+QUICK BUILD COMMANDS (COPY & PASTE)
+========================================
+
+Complete Build Sequence:
+------------------------
+cd /Users/ravindurasanga/Desktop/RP025/MyApp
+npx expo prebuild --platform android --clean
+cd android
+./gradlew assembleRelease
+cp ./app/build/outputs/apk/release/app-release.apk ~/Desktop/Cinnova-new.apk
+
+Fast Rebuild (after minor changes):
+-----------------------------------
+cd /Users/ravindurasanga/Desktop/RP025/MyApp/android
+./gradlew assembleRelease
+cp ./app/build/outputs/apk/release/app-release.apk ~/Desktop/Cinnova-updated.apk
+
+========================================
+APK OPTIMIZATION SETTINGS (ALREADY APPLIED)
+========================================
+✅ Hermes Engine: Enabled for faster performance
+✅ ProGuard/R8: Enabled for code minification
+✅ Resource Shrinking: Enabled to remove unused resources
+✅ Asset Bundling: Optimized to include only necessary assets
+✅ Metro Config: Enhanced for better tree shaking
+
+========================================
+ESTIMATED BUILD TIMES
+========================================
+- Full Clean Build: 10-15 minutes
+- Incremental Build: 3-5 minutes
+- EAS Cloud Build: 15-25 minutes
+
+========================================
+FILE LOCATIONS
+========================================
+- Main Project: /Users/ravindurasanga/Desktop/RP025/MyApp
+- Android Project: /Users/ravindurasanga/Desktop/RP025/MyApp/android
+- Generated APK: /Users/ravindurasanga/Desktop/RP025/MyApp/android/app/build/outputs/apk/release/app-release.apk
+- App Config: /Users/ravindurasanga/Desktop/RP025/MyApp/app.json
+- Build Config: /Users/ravindurasanga/Desktop/RP025/MyApp/eas.json
+
+========================================
+TESTING YOUR APK
+========================================
+1. Install on Android device:
+   - Enable Developer Options
+   - Enable "Install unknown apps"
+   - Transfer APK to device
+   - Tap APK file to install
+
+2. Check APK info:
+   - Size should be around 70-75MB
+   - Version should match your app.json
+   - Install should complete without errors
+
+========================================
+NOTES
+========================================
+- Always test your APK on a real device before distributing
+- Keep track of version numbers for each build
+- The first build after changes may take longer
+- Subsequent builds will be faster due to caching
+- If build fails, try the troubleshooting steps above
+
+Last Updated: September 14, 2025
+========================================
